@@ -22,6 +22,8 @@ This module assumes Twitter Bootstrap styling and includes some styles of its ow
 
 ## Getting Started
 
+This library requires JQuery.
+
 Download directly from the repo or install via Bower with `bower install cgross/angular-soft-forms`.
 
 Add `angular-soft-forms.js` and `angular-soft-forms.css` to your index.html.  
