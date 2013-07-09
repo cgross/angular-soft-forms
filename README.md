@@ -66,4 +66,4 @@ A separate attribute `cg-change` may be used to provide a callback expression th
 
 ## Release History
 
- * v1.0.0 - Initial release.
+ * v1.0.0 - Initial release. 
