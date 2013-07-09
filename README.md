@@ -7,14 +7,14 @@ In many business applications, a page to edit an entity may contain as many as 1
 * When unfocused, inputs are considered in _read_ mode and are styled without a border.
 * When focused, inputs are considered in _edit_ mode and when in _edit_ mode:
 	* A user may make an update and hit enter to persist the update.
-	* A user may make an update and hit enter to cancel the update and revert to the previous value.
+	* A user may make an update and hit escape to cancel the update and revert to the previous value.
 	* When a user focuses out of the input (via the keyboard or mouse) the updated value is then persisted.
 
 This is all an attempt to turn a regular input and make it appear as if its being used as an in-place editor above a read-only field.
 
 Importantly, when this module is used, a form that previously required a save or submit button now no longer needs that button.  Instead the updates can be persisted on when the _edit_ mode is exited via the `cg-change` callback.
 
-This module assumes Twitter Bootstrap styling and includes some styles of its own to override the standard Bootstrap classes.  If you intend to use this module with another set styles you may need to refine the `cg-soft` styles.
+This module assumes Twitter Bootstrap styling and includes some styles of its own to override the standard Bootstrap classes.  If you intend to use this module with with something other than Bootstrap you may need to refine the `cg-soft` styles.
 
 ## Demo
 
@@ -22,7 +22,9 @@ This module assumes Twitter Bootstrap styling and includes some styles of its ow
 
 ## Getting Started
 
-Add `angular-soft-forms.js` and `angular-soft-forms.css` to your index.html.  Or use install via Bower with `bower install cgross/angular-soft-forms`.
+Download directly from the repo or install via Bower with `bower install cgross/angular-soft-forms`.
+
+Add `angular-soft-forms.js` and `angular-soft-forms.css` to your index.html.  
 
 Add `cgross.soft-forms` as a module dependency for your module:
 
@@ -37,6 +39,10 @@ Add `cg-soft` to the your inputs:
 ```
 
 Optionally, apply the `cg-soft` class to your form to use the provided styling.  This will soften the labels, move the fields closer together (since there are no longer borders that require more whitespace) and bold the input font.
+
+```html
+<form class="form-horizontal cg-soft">
+```
 
 ## Options
 
@@ -56,7 +62,7 @@ or this:
 
 ### cg-change
 
-A separate attribute `cg-change` may be used to provide a callback expression to be called when the value in the input is ready to be persisted to the back-end (i.e. the input appears to have left the _edit_ mode).
+A separate attribute `cg-change` may be used to provide a callback expression that is called when the value in the input is ready to be persisted to the back-end (i.e. the input appears to have left the _edit_ mode).
 
 ## Release History
 
