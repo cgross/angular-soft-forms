@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Angular Soft Forms Demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../bower_components/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../angular-soft-forms.css" rel="stylesheet">
+
+</head>
+<body ng-controller="DemoCtrl" style="padding-top:50px">
+
+  <div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Demo</a>
+          <ul class="nav">
+          </ul>
+        </div>
+      </div>
+    </div>    
+
+    <div class="container">
+      <div class="row">
+
+        <div class="span6">
+
+          <p>This is a normal bootstrap form.  Fields are spread out to lessen the noise of the input borders.</p>
+
+          <form class="form-horizontal">
+            <fieldset>
+
+              <legend>Normal Bootstrap Form</legend>
+
+              <div class="control-group">
+                <label class="control-label" for="bs1">Name</label>
+                <div class="controls">
+                  <input id="bs1" type="text" ng-model="bs1">
+                </div>
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="bs2">Address Line 1</label>
+                <div class="controls">
+                  <input id="bs2" type="text" ng-model="bs2">
+                </div>
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="bs3">Address Line 2</label>
+                <div class="controls">
+                  <input id="bs3" type="text" ng-model="bs3">
+                </div>
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="bs4">City</label>
+                <div class="controls">
+                  <input id="bs4" type="text" ng-model="bs4">
+                </div>        
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="bs5">State</label>
+                <div class="controls">
+                  <input id="bs5" type="text" ng-model="bs5">
+                </div>        
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="bs5">Zip</label>
+                <div class="controls">
+                  <input id="bs6" type="text" ng-model="bs6">
+                </div>        
+              </div>              
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn">Cancel</button>
+            </div>
+
+          </form>
+
+
+        </div>
+
+        <div class="span6">
+
+          <p>This form uses the <b>cg-soft</b> directive and the <b>cg-soft</b> class on the form.  This form also does not require a save button as changes can be saved via the <b>cg-change</b> callback.</p>
+
+          <form class="form-horizontal cg-soft">
+            <fieldset>
+
+              <legend>Form using cg-soft</legend>  
+
+              <div class="control-group">
+                <label class="control-label" for="cg1">Name</label>
+                <div class="controls">
+                  <input cg-soft type"text" id="cg1" type="text" ng-model="name" cg-change="change($ngModel,$value)" class="input-large" placeholder="(name)">
+                </div>
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="cg2">Address Line 1</label>
+                <div class="controls">
+                  <input cg-soft type"text" id="cg2" type="text" ng-model="address1" cg-change="change($ngModel,$value)" class="input-large" placeholder="(address line 1)">
+                </div>
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="cg3">Address Line 2</label>
+                <div class="controls">
+                  <input cg-soft type"text" id="cg3" type="text" ng-model="address2" cg-change="change($ngModel,$value)" class="input-large">
+                </div>
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="cg4">City</label>
+                <div class="controls">
+                  <input cg-soft type"text" id="cg4" type="text" ng-model="city" cg-change="change($ngModel,$value)" class="input-large" placeholder="(city)">
+                </div>        
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="cg5">State</label>
+                <div class="controls">
+                  <input cg-soft type"text" id="cg5" type="text" ng-model="state" cg-change="change($ngModel,$value)" class="input-large" placeholder="(state)">
+                </div>        
+              </div>
+              <div class="control-group">    
+                <label class="control-label" for="cg6">Zip (resize=true)</label>
+                <div class="controls">
+                  <input cg-soft="{resize:true}" type"text" id="cg6" type="text" ng-model="zip" cg-change="change($ngModel,$value)" style="min-width:60px;max-width:240px" placeholder="(zip)">
+                </div>        
+              </div>              
+            </fieldset>
+          </form>
+
+          <div class="alert" ng-show="showNgChangeAlert">
+            <strong>ng-change</strong> {{change_message}}
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="../bower_components/jquery/jquery.js"></script>
+  <script src="../bower_components/angular-unstable/angular.js"></script>
+  <script src="../angular-soft-forms.js"></script>
+  <script src="demo.js"></script> 
+
+</body>
+</html>
