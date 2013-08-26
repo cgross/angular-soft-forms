@@ -92,7 +92,7 @@ angular.module('cgross.soft-forms').directive('cgSoft',['$timeout','$parse',
 
                     testElement.text(text);
     
-                    var width = testElement.width();
+                    var width = testElement.outerWidth();
                     testElement.remove();
 
                     var extra = 1;
