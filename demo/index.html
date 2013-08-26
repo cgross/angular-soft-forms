@@ -125,7 +125,7 @@
               <div class="control-group">    
                 <label class="control-label" for="cg6">Zip (resize=true)</label>
                 <div class="controls">
-                  <input cg-soft="{resize:true}" type="text" id="cg6" type="text" ng-model="zip" cg-change="change($ngModel,$value)" style="min-width:60px;max-width:240px" placeholder="(zip)">
+                  <input cg-soft="{resize:true}" type="text" id="cg6" type="text" ng-model="zip" ng-trim="false" cg-change="change($ngModel,$value)" style="min-width:60px;max-width:240px" placeholder="(zip)">
                 </div>        
               </div>              
             </fieldset>
