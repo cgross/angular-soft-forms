@@ -60,13 +60,15 @@ or this:
 <input type="text" cg-soft="{resize:true}"></div>
 ```
 
-Pass in `required:true` to cg-soft to make the default placeholder text slightly red to indicate required fields (doesn't perform validation): 
+* resize - When resize is true, the size of the input will be dynamically altered to match the width of the input's text. This matches the in-place editing behavior that many users may be used to.  When resize is true, it is recommended that you apply a minimun and maximum to the input.
+
+* required - Add `required:true` to cg-soft to make the default placeholder text slightly red to indicate required fields (doesn't perform validation): 
 
 ```html
 <input type="text" cg-soft="{required:true}"></div>
 ```
 
-* resize - When resize is true, the size of the input will be dynamically altered to match the width of the input's text. This matches the in-place editing behavior that many users may be used to.  When resize is true, it is recommended that you apply a minimun and maximum to the input.
+
 
 ### cg-change
 
