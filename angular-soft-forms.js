@@ -18,6 +18,9 @@ angular.module('cgross.soft-forms').directive('cgSoft',['$timeout','$parse',
                 if (options && options.resize){
                     element.addClass('cg-soft-resize');
                 }
+                if (options && options.required){
+                    element.addClass('cg-soft-required');
+                }
 
                 var change;
                 if (attrs.cgChange){
