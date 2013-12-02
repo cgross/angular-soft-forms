@@ -23,6 +23,18 @@ input.cg-soft:focus {
 form.cg-soft .control-label {
 	color:#999;
 }
+.cg-soft-required::-webkit-input-placeholder{
+	color:rgba(255,90,90,1);
+}
+.cg-soft-required:-moz-placeholder{
+	color:rgba(255,40,40,1);
+}
+.cg-soft-required::-moz-placeholder{
+    color:rgba(255,40,40,1);
+}
+.cg-soft-required:-ms-input-placeholder{
+    color:rgba(255,40,40,1);
+}
 form.cg-soft .form-horizontal .control-group {
 	margin-bottom: 3px;
 }

@@ -62,6 +62,14 @@ or this:
 
 * resize - When resize is true, the size of the input will be dynamically altered to match the width of the input's text. This matches the in-place editing behavior that many users may be used to.  When resize is true, it is recommended that you apply a minimun and maximum to the input.
 
+* required - Add `required:true` to cg-soft to make the default placeholder text slightly red to indicate required fields (doesn't perform validation): 
+
+```html
+<input type="text" cg-soft="{required:true}"></div>
+```
+
+
+
 ### cg-change
 
 A separate attribute `cg-change` may be used to provide a callback expression that is called when the value in the input is ready to be persisted to the back-end (i.e. the input appears to have left the _edit_ mode).
